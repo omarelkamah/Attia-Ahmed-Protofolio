@@ -1,0 +1,10 @@
+$mainColor: #15023a;
+$backgroundColor : crimson;
+
+$mobileScreen : 768px;
+
+@mixin mobile {
+    @media (max-width: #{$mobileScreen}) {
+        @content
+    }
+}

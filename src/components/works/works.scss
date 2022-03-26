@@ -1,0 +1,168 @@
+@import '../../global.scss';
+
+.works {
+    background-color: $backgroundColor;
+    position: relative;
+
+    @include mobile {
+        height: auto !important;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 28px;
+        color: white;
+        margin: 0;
+        padding-top: 10px;
+
+        h2 { 
+            margin-top: 10px;
+            margin-bottom: 20px; 
+        }
+    }
+
+    .slider {
+        position: absolute;
+        height: 350px;
+        overflow: hidden;
+        left: 0;
+        display: flex;
+        transition: 1s; 
+        
+        @include mobile {
+            flex-direction: column;
+            height: 100% !important;
+            position: relative !important;
+        }
+
+        .container {
+            width: 100vw;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include mobile {
+                margin-bottom: 24px;
+                height: 170px;
+            }
+
+            .item {
+                background-color: white;
+                width: 50%;
+                height: 100%;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+
+                @include mobile {
+                    width: 82%;
+                }
+
+                .left {
+                    flex: 4;
+                    height: 100%;
+                    padding-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .img-container {
+                        width: 50px;
+                        height: 50px;
+                        background: $backgroundColor;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 15px;
+                        padding: 5px;
+
+                        @include mobile {
+                            width: 40px;
+                            height: 40px;
+                            margin-top: 5px;
+                        }
+
+                        img {
+                            width: 90%;
+                        }
+
+                    }
+
+                    h3 {
+                        color: $mainColor;
+                        margin-bottom: 0;
+                        letter-spacing: 0.5px;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        line-height: 1.5;
+                        margin-top: 10px;
+                        color: #6a6969;
+
+                        @include mobile {
+                            display: none;
+                        }
+                    }
+
+                    span {
+                        text-decoration: underline;
+                    }
+
+                }
+
+                .right {
+                    flex: 8;
+                    height: 100%;
+                    margin-left: 4%;
+
+                    img {
+                        width: 400px;
+                        transform: rotate(-10deg);
+                        transform-origin: left;
+                        position: relative;
+                        top: -6px;
+
+                        @include mobile {
+                            transform: rotate(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .arrow {
+        font-size: 40px;
+        color: white;
+
+        @include mobile {
+            display: none;
+        }
+
+        .left,
+        .right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                color: $mainColor
+            }
+        }
+
+        .left {
+            left: 80px;
+        }
+
+        .right {
+            right: 80px;
+        }
+
+    }
+}

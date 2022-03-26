@@ -1,0 +1,13 @@
+.homePage {
+    transition: .3s;
+    .sectionsContainer {
+        width: 100%;
+        top: 70px;
+        position: relative;
+        scroll-behavior: smooth;
+
+        > * {
+            min-height: calc(100vh - 70px);
+        }
+    }
+}

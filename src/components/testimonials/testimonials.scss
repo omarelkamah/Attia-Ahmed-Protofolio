@@ -1,0 +1,82 @@
+@import "../../global.scss";
+
+.testimoials {
+  @include mobile {
+    height: auto !important;
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 28px;
+    color: #15023a;
+    margin: 0;
+    padding-top: 10px;
+
+    h2 {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+    position: relative;
+
+    .itemContainer {
+      display: flex;
+      align-items: center;
+      gap: 3%;
+      overflow-x: scroll;
+      scrollbar-width: 0;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .card {
+        width: 300px;
+        transition: 0.3s;
+
+        .imgContainer {
+          width: 300px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        @include mobile {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .arrows {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+
+      i {
+        cursor: pointer;
+        font-size: 20px;
+        width: 40px;
+        height: 60px;
+        background-color: #1d9fd9;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+      }
+    }
+  }
+}

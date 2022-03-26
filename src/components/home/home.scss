@@ -1,0 +1,104 @@
+@import "../../global.scss";
+
+.home {
+  display: flex;
+  position: relative;
+  height: calc(100vh - 70px);
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+    height: 100%;
+
+    @include mobile {
+      height: 100vh;
+      flex: 0.5;
+    }
+    .img-container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      float: right;
+      align-items: flex-start;
+
+      @include mobile {
+        float: none;
+        width: 100%;
+        height: 50vh;
+        align-items: flex-start;
+      }
+
+      img {
+        width: 77%;
+      }
+    }
+  }
+
+  .right {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+
+    p.hello {
+      font-size: 24px;
+      font-weight: 500;
+      text-transform: capitalize;
+      margin: 0;
+    }
+
+    .logo-container {
+      .img-logo {
+        width: 200px;
+        margin: 7px 0;
+      }
+    }
+
+    .job-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+      color: $backgroundColor;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    left: 75%;
+    top: 92%;
+    font-size: 25px;
+    color: $mainColor;
+    animation: arrowAnimation 1.7s linear infinite;
+  }
+}
+
+@keyframes arrowAnimation {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 10px);
+  }
+}
+
+.ityped-cursor {
+  animation: TextEffect 1s ease infinite;
+}
+
+@keyframes TextEffect {
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

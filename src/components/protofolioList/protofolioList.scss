@@ -1,0 +1,22 @@
+@import '../../global.scss';
+
+li {
+  color: $mainColor;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+
+  @include mobile {
+    margin: 0;
+  }
+
+  &.active,
+  &:hover {
+      background-color: $mainColor;
+    color: white;
+
+  }
+}
