@@ -6,9 +6,8 @@ import './projectPage.scss'
 
 function ProjectPage ({ dark, data }) {
   const projectId = useParams()
-  const item = data[+projectId.id - 1]
+  const item = data[projectId.id]
 
-  console.log(item)
   return (
     <div className='popup' id='' style={{ background: dark && '#222' }}>
       <Link to='/' className='icon'>

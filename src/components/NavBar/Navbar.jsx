@@ -11,7 +11,7 @@ export default function Navbar ({ dark, openMenue, handeleMenue }) {
       <div className='container'>
         <div className='left'>
           <Link to='/' className='logo'>
-            <img src='assets/main-logo.png' alt='Logo' />
+            <img src='/assets/main-logo.png' alt='Logo' />
           </Link>
           <div className='navbar-contact' style={{ color: dark && '#fff' }}>
             <i className='far fa-envelope-open'></i>
