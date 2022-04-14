@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
-import Contact from '../../components/contact/Contact'
+// import Contact from '../../components/contact/Contact'
 import Home from '../../components/home/Home'
 import Menue from '../../components/menue/Menue'
 import Navbar from '../../components/NavBar/Navbar'
 import Protofolio from '../../components/protofolio/Protofolio'
 import Testimonials from '../../components/testimonials/Testimonials'
+// import ProjectPage from '../projectPage/ProjectPage'
 // import Works from '../../components/works/Works'
 import './homePage.scss'
 
-export default function HomePage () {
+export default function HomePage ({ data, setData }) {
   const [openMenue, handeleMenue] = useState(false)
   const [dark, setDark] = useState(false)
 
@@ -26,7 +27,8 @@ export default function HomePage () {
       />
       <div className='sectionsContainer'>
         <Home dark={dark} />
-        <Protofolio dark={dark} />
+        <Protofolio dark={dark} data={data} setData={setData} />
+
         {/* <Works /> */}
         <Testimonials dark={dark} />
         {/* <Contact dark={dark} /> */}

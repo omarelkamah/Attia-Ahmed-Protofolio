@@ -1,26 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import ProtofolioList from '../protofolioList/ProtofolioList'
-
 import './protofolio.scss'
-
-import {
-  all,
-  socialMediaDesign,
-  logo,
-  brandIdentity,
-  videos,
-  labels
-} from '../../data'
-import ProtofolioPupup from '../protofolioPopup/ProtofolioPupup'
+import { all, socialMediaDesign, logo, videos, labels } from '../../data'
+// import ProtofolioPupup from '../protofolioPopup/ProtofolioPupup'
 import { Fade } from 'react-reveal'
+import { Link } from 'react-router-dom'
 
-export default function Protofolio ({ dark }) {
+export default function Protofolio ({ dark, data, setData }) {
   const [selected, setSelected] = useState('all')
-  const [data, setData] = useState([])
-
-  const [open, setOpen] = useState(false)
-
-  const [getId, seGetId] = useState(1)
 
   const theList = [
     {
@@ -126,26 +113,11 @@ export default function Protofolio ({ dark }) {
                   </div>
                   <div className='imgInfo'>
                     <h3>{item.title}</h3>
-                    <button
-                      onClick={() => {
-                        setOpen(true)
-                        seGetId(item.id)
-                      }}
-                    >
-                      view
-                    </button>
+                    <Link to={`/projects/${item.id}`}>view</Link>
                   </div>
                 </div>
               </Fade>
             )}
-            <ProtofolioPupup
-              dark={dark}
-              open={open}
-              setOpen={setOpen}
-              id={getId}
-              key={Math.random()}
-              item={item}
-            />
           </>
         ))}
       </div>

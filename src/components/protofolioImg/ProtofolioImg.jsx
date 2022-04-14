@@ -22,9 +22,7 @@ export default function ProtofolioSlider ({ src, secondImgs }) {
               setSelect(img.secondImg)
             }}
           >
-            <Fade bottom>
-              <img src={img.secondImg} alt='' />
-            </Fade>
+            <img src={img.secondImg} alt='' />
           </div>
         ))}
       </div>
