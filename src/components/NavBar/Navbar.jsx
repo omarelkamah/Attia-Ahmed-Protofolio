@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './navbar.scss'
 
-export default function Navbar ({ dark, openMenue, handeleMenue }) {
+export default function Navbar ({ dark, openMenue, setOpenMenue }) {
   return (
     <div
       className={'navbar ' + (openMenue && 'active')}
@@ -22,7 +22,7 @@ export default function Navbar ({ dark, openMenue, handeleMenue }) {
             <span>01006129547</span>
           </div>
         </div>
-        <div className='right' onClick={() => handeleMenue(!openMenue)}>
+        <div className='right' onClick={() => setOpenMenue(!openMenue)}>
           <span className='one' style={{ background: dark && '#fff' }}></span>
           <span className='two' style={{ background: dark && '#fff' }}></span>
           <span className='three' style={{ background: dark && '#fff' }}></span>

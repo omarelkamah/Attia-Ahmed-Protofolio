@@ -113,7 +113,7 @@ export default function Protofolio ({ dark, data, setData }) {
                   </div>
                   <div className='imgInfo'>
                     <h3>{item.title}</h3>
-                    <Link to={`/projects/${item.id}`}>view</Link>
+                    <Link to={`/projects/${item.title}`}>view</Link>
                   </div>
                 </div>
               </Fade>

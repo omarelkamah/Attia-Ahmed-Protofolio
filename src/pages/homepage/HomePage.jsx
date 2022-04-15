@@ -9,21 +9,19 @@ import Testimonials from '../../components/testimonials/Testimonials'
 // import Works from '../../components/works/Works'
 import './homePage.scss'
 
-export default function HomePage ({ data, setData }) {
-  const [openMenue, handeleMenue] = useState(false)
-  const [dark, setDark] = useState(false)
-
+export default function HomePage (props) {
+  const { data, setData, openMenue, setOpenMenue, dark, setDark } = props
   return (
     <div
       className='homePage'
       style={{ background: dark && '#222', color: dark && '#fff' }}
     >
-      <Navbar dark={dark} openMenue={openMenue} handeleMenue={handeleMenue} />
+      <Navbar dark={dark} openMenue={openMenue} setOpenMenue={setOpenMenue} />
       <Menue
         setDark={setDark}
         dark={dark}
         openMenue={openMenue}
-        handeleMenue={handeleMenue}
+        setOpenMenue={setOpenMenue}
       />
       <div className='sectionsContainer'>
         <Home dark={dark} />

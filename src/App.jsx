@@ -4,9 +4,13 @@ import HomePage from './pages/homepage/HomePage'
 import ProjectPage from './pages/projectPage/ProjectPage'
 import WorkPage from './pages/workPage/WorkPage'
 import CategoriePage from './pages/categoriePage/CategoriePage'
+import { all } from './data'
 
 function App () {
-  const [data, setData] = useState([])
+  const [openMenue, setOpenMenue] = useState(false)
+  const [dark, setDark] = useState(false)
+
+  const [data, setData] = useState(all)
 
   return (
     <BrowserRouter>
@@ -14,10 +18,22 @@ function App () {
         <Route
           path='/'
           exect
-          element={<HomePage data={data} setData={setData} />}
+          element={
+            <HomePage
+              data={data}
+              setData={setData}
+              openMenue={openMenue}
+              setOpenMenue={setOpenMenue}
+              dark={dark}
+              setDark={setDark}
+            />
+          }
         />
         <Route path='/projects' element={<WorkPage />} />
-        <Route path='/projects/:id' element={<ProjectPage data={data} />} />
+        <Route
+          path='/projects/:name'
+          element={<ProjectPage data={data} dark={dark} />}
+        />
         <Route path='/categories/:name' element={<CategoriePage />} />
       </Routes>
     </BrowserRouter>
