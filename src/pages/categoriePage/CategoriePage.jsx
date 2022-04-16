@@ -3,13 +3,13 @@ import { Link, useParams } from 'react-router-dom'
 import Navbar from '../../components/NavBar/Navbar'
 import { logo, socialMediaDesign, labels, videos } from '../../data'
 import { useEffect, useState } from 'react'
+import Menue from '../../components/menue/Menue'
 
-function CategoriePage () {
+function CategoriePage (props) {
+  const { dark, setDark, openMenue, setOpenMenue } = props
   const param = useParams()
   const [data, setData] = useState([])
   const categorieName = param.name
-
-  console.log(data)
 
   useEffect(() => {
     switch (categorieName) {
@@ -36,7 +36,13 @@ function CategoriePage () {
 
   return (
     <div className='categoriePage'>
-      <Navbar />
+      <Navbar openMenue={openMenue} setOpenMenue={setOpenMenue} />
+      <Menue
+        setDark={setDark}
+        dark={dark}
+        openMenue={openMenue}
+        setOpenMenue={setOpenMenue}
+      />
       <h1 className='categorieTitle'>
         Welcom to {categorieName} All Projects..!
       </h1>
@@ -48,7 +54,7 @@ function CategoriePage () {
             </div>
             <div className='imgInfo'>
               <h3>{item.title}</h3>
-              <Link to={`/projects/${item.id}`}>view</Link>
+              <Link to={`/projects/${item.title}`}>view</Link>
             </div>
           </div>
         ))}

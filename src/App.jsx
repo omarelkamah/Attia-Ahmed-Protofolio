@@ -34,7 +34,17 @@ function App () {
           path='/projects/:name'
           element={<ProjectPage data={data} dark={dark} />}
         />
-        <Route path='/categories/:name' element={<CategoriePage />} />
+        <Route
+          path='/categories/:name'
+          element={
+            <CategoriePage
+              dark={dark}
+              setDark={setDark}
+              openMenue={openMenue}
+              setOpenMenue={setOpenMenue}
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   )

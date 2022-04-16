@@ -11,7 +11,7 @@
   color: $mainColor;
   padding: 5px 40px;
   box-sizing: border-box;
-  transition: 1s ease;
+  transition: 0.5s ease;
   box-shadow: 0 -14px 14px 15px #cecccc;
 
   &.active {
@@ -62,7 +62,7 @@
     .right {
       width: 30px;
       height: 30px;
-        cursor: pointer;
+      cursor: pointer;
 
       span {
         width: 30px;
@@ -73,7 +73,7 @@
         align-items: center;
         background: $mainColor;
         cursor: pointer;
-        transition: 1.5s ease;
+        transition: 0.5s ease;
         transform-origin: left;
 
         &:not(:last-of-type) {
