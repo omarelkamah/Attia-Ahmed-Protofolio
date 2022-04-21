@@ -9,7 +9,6 @@ import { all } from './data'
 function App () {
   const [openMenue, setOpenMenue] = useState(false)
   const [dark, setDark] = useState(false)
-
   const [data, setData] = useState(all)
 
   return (

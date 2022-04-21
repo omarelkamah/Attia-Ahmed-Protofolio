@@ -45,7 +45,7 @@ export const all = [
   },
   {
     id: 4,
-    title: "the book group",
+    title: "the baby group",
     mainImg: "/assets/proImg/social/4/1.jpg",
     brandLogo: "/assets/proImg/social/4/logo.png",
     secondImgs: [
@@ -60,7 +60,7 @@ export const all = [
   },
   {
     id: 5,
-    title: "NT3LM L",
+    title: "NT3LM",
     mainImg: "/assets/proImg/social/5/1.jpg",
     brandLogo: "/assets/proImg/social/5/logo.png",
     secondImgs: [
@@ -72,6 +72,16 @@ export const all = [
       { id: 6, secondImg: "/assets/proImg/social/5/6.jpg" },
       { id: 7, secondImg: "/assets/proImg/social/5/7.jpg" },
       { id: 8, secondImg: "/assets/proImg/social/5/8.jpg" },
+      { id: 9, secondImg: "/assets/proImg/social/5/9.jpg" },
+      { id: 10, secondImg: "/assets/proImg/social/5/10.jpg" },
+      { id: 11, secondImg: "/assets/proImg/social/5/11.jpg" },
+      { id: 12, secondImg: "/assets/proImg/social/5/12.jpg" },
+      { id: 13, secondImg: "/assets/proImg/social/5/13.jpg" },
+      { id: 14, secondImg: "/assets/proImg/social/5/14.jpg" },
+      { id: 15, secondImg: "/assets/proImg/social/5/15.jpg" },
+      { id: 16, secondImg: "/assets/proImg/social/5/16.jpg" },
+      { id: 17, secondImg: "/assets/proImg/social/5/17.jpg" },
+      { id: 18, secondImg: "/assets/proImg/social/5/18.jpg" },
     ],
     link: "https://www.behance.net/gallery/137600751/Social-Media-Design-about-NT3LM",
     desc: "It is an integrated education system for teaching all levels of education through the NT3LM L website and through the Mobile Application",
@@ -343,7 +353,7 @@ export const socialMediaDesign = [
   },
   {
     id: 4,
-    title: "the book group",
+    title: "the baby group",
     mainImg: "/assets/proImg/social/4/1.jpg",
     brandLogo: "/assets/proImg/social/4/logo.png",
     secondImgs: [
@@ -358,7 +368,7 @@ export const socialMediaDesign = [
   },
   {
     id: 5,
-    title: "NT3LM L",
+    title: "NT3LM",
     mainImg: "/assets/proImg/social/5/1.jpg",
     brandLogo: "/assets/proImg/social/5/logo.png",
     secondImgs: [
@@ -370,6 +380,16 @@ export const socialMediaDesign = [
       { id: 6, secondImg: "/assets/proImg/social/5/6.jpg" },
       { id: 7, secondImg: "/assets/proImg/social/5/7.jpg" },
       { id: 8, secondImg: "/assets/proImg/social/5/8.jpg" },
+      { id: 9, secondImg: "/assets/proImg/social/5/9.jpg" },
+      { id: 10, secondImg: "/assets/proImg/social/5/10.jpg" },
+      { id: 11, secondImg: "/assets/proImg/social/5/11.jpg" },
+      { id: 12, secondImg: "/assets/proImg/social/5/12.jpg" },
+      { id: 13, secondImg: "/assets/proImg/social/5/13.jpg" },
+      { id: 14, secondImg: "/assets/proImg/social/5/14.jpg" },
+      { id: 15, secondImg: "/assets/proImg/social/5/15.jpg" },
+      { id: 16, secondImg: "/assets/proImg/social/5/16.jpg" },
+      { id: 17, secondImg: "/assets/proImg/social/5/17.jpg" },
+      { id: 18, secondImg: "/assets/proImg/social/5/18.jpg" },
     ],
     link: "https://www.behance.net/gallery/137600751/Social-Media-Design-about-NT3LM",
     desc: "It is an integrated education system for teaching all levels of education through the NT3LM L website and through the Mobile Application",

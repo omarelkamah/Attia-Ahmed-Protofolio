@@ -1,27 +1,27 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 
-import { init } from 'ityped'
+// import { init } from 'ityped'
 
 import './home.scss'
 import { Fade } from 'react-reveal'
 
 export default function Home ({ dark }) {
-  const typeText = useRef()
+  // const typeText = useRef()
 
-  useEffect(() => {
-    console.log(typeText)
+  // useEffect(() => {
+  //   console.log(typeText)
 
-    init(typeText.current, {
-      showCursor: true,
-      backDelay: 500,
-      strings: [
-        'Graphic Designer',
-        'Social Media Designer',
-        'Logo Designer',
-        'Brand Indentity Designer'
-      ]
-    })
-  }, [])
+  //   init(typeText.current, {
+  //     showCursor: true,
+  //     backDelay: 500,
+  //     strings: [
+  //       'Graphic Designer',
+  //       'Social Media Designer',
+  //       'Logo Designer',
+  //       'Brand Indentity Designer'
+  //     ]
+  //   })
+  // }, [])
 
   return (
     <div className='home' id='home'>
@@ -38,9 +38,9 @@ export default function Home ({ dark }) {
           <div className='logo-container'>
             <img src='assets/main-logo.png' alt='Name' className='img-logo' />
           </div>
-          <p className='job-title' style={{ color: dark && '#fff' }}>
+          {/* <p className='job-title' style={{ color: dark && '#fff' }}>
             <span ref={typeText}></span>
-          </p>
+          </p> */}
         </Fade>
       </div>
       <a href='#protofolio' className='icon' style={{ color: dark && '#fff' }}>

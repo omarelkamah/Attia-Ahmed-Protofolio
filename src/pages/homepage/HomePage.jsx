@@ -26,10 +26,7 @@ export default function HomePage (props) {
       <div className='sectionsContainer'>
         <Home dark={dark} />
         <Protofolio dark={dark} data={data} setData={setData} />
-
-        {/* <Works /> */}
         <Testimonials dark={dark} />
-        {/* <Contact dark={dark} /> */}
       </div>
     </div>
   )

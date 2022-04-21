@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import ProtofolioList from '../protofolioList/ProtofolioList'
 import './protofolio.scss'
 import { all, socialMediaDesign, logo, videos, labels } from '../../data'
-// import ProtofolioPupup from '../protofolioPopup/ProtofolioPupup'
 import { Fade } from 'react-reveal'
 import { Link } from 'react-router-dom'
 
@@ -19,12 +18,12 @@ export default function Protofolio ({ dark, data, setData }) {
       title: 'Social Media Design'
     },
     {
-      id: 'labels',
-      title: 'Labels'
-    },
-    {
       id: 'logo',
       title: 'Logo / Brand Identity'
+    },
+    {
+      id: 'labels',
+      title: 'Labels'
     },
     {
       id: 'videos',
@@ -42,12 +41,12 @@ export default function Protofolio ({ dark, data, setData }) {
         setData(socialMediaDesign)
         break
 
-      case 'labels':
-        setData(labels)
-        break
-
       case 'logo':
         setData(logo)
+        break
+
+      case 'labels':
+        setData(labels)
         break
 
       case 'videos':
@@ -107,15 +106,17 @@ export default function Protofolio ({ dark, data, setData }) {
               </Fade>
             ) : (
               <Fade bottom>
-                <div className='item' key={Math.random()}>
-                  <div className='img-container'>
-                    <img src={item.mainImg} alt={item.title} />
+                <Link to={`/projects/${item.title}`}>
+                  <div className='item' key={Math.random()}>
+                    <div className='img-container'>
+                      <img src={item.mainImg} alt={item.title} />
+                    </div>
+                    <div className='imgInfo'>
+                      <h3>{item.title}</h3>
+                      <Link to={`/projects/${item.title}`}>view</Link>
+                    </div>
                   </div>
-                  <div className='imgInfo'>
-                    <h3>{item.title}</h3>
-                    <Link to={`/projects/${item.title}`}>view</Link>
-                  </div>
-                </div>
+                </Link>
               </Fade>
             )}
           </>

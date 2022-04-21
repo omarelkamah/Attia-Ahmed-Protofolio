@@ -1,4 +1,4 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
 li {
   color: $mainColor;
@@ -15,8 +15,7 @@ li {
 
   &.active,
   &:hover {
-      background-color: $mainColor;
+    background-color: #0d76b2;
     color: white;
-
   }
 }
